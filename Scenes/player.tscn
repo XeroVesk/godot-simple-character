@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://77cid51qkfb2"]
+
+[ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="1_iw1p8"]
+[ext_resource type="Texture2D" uid="uid://c11wvcbek2hn0" path="res://icon.svg" id="2_abu6k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swob4"]
+size = Vector2(38, 176)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_iw1p8")
+
+[node name="Body" type="Node2D" parent="."]
+position = Vector2(0, -90)
+
+[node name="Sprite2D" type="Sprite2D" parent="Body"]
+position = Vector2(0, -63)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_abu6k")
+metadata/_edit_lock_ = true
+
+[node name="Body" type="Sprite2D" parent="Body"]
+scale = Vector2(0.3, 0.7)
+texture = ExtResource("2_abu6k")
+metadata/_edit_lock_ = true
+
+[node name="LeftLeg" type="Sprite2D" parent="Body"]
+position = Vector2(-15, 67)
+rotation = 0.244346
+scale = Vector2(0.15, 0.4)
+texture = ExtResource("2_abu6k")
+metadata/_edit_lock_ = true
+
+[node name="RightLeg" type="Sprite2D" parent="Body"]
+position = Vector2(15, 67)
+rotation = -0.244346
+scale = Vector2(0.15, 0.4)
+texture = ExtResource("2_abu6k")
+metadata/_edit_lock_ = true
+
+[node name="LeftArm" type="Sprite2D" parent="Body"]
+position = Vector2(-30, -15)
+rotation = 0.523599
+scale = Vector2(0.15, 0.4)
+texture = ExtResource("2_abu6k")
+metadata/_edit_lock_ = true
+
+[node name="RightArm" type="Sprite2D" parent="Body"]
+position = Vector2(30, -15)
+rotation = -0.523599
+scale = Vector2(0.15, 0.4)
+texture = ExtResource("2_abu6k")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -84)
+shape = SubResource("RectangleShape2D_swob4")
